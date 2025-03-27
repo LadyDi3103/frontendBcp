@@ -1,0 +1,26 @@
+.hero {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .home__titulo {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .home__titulo span {
+    color: var(--color-principal);
+  }
+  
+  .home__descripcion {
+    font-size: 20px;
+  }
+  
+  .home__boton {
+    background-color: var(--color-secundario);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
