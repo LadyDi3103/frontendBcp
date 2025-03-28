@@ -1,0 +1,35 @@
+.opcion-conocida-wrapper {
+    position: relative;
+    max-width: 400px;
+    margin: 5px auto;
+  }
+  
+  .fondo-azul {
+    background-color: #101759;
+    height: 50px;
+    border-radius: 16px;
+  }
+  
+  .opcion-conocida-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    top: -40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  .opcion-conocida-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #162c63;
+    margin-bottom: 12px;
+  }
+  
+  .opcion-conocida-card p {
+    font-size: 14px;
+    color: #444;
+    margin: 0;
+    line-height: 1.4;
+  }

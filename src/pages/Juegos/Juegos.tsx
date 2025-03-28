@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import MainLayout from "../../Layout/MainLayout/MainLayout";
 import JuegoLogin from "../../components/Juego/JuegoLogin/JuegoLogin";
 import "./Juegos.css";
@@ -10,6 +11,8 @@ import JuegoFrame from "../../components/Juego/JuegoFrame/JuegoFrame";
 import JuegoCard from "../../components/Juego/JuegoCard/JuegoCard";
 import JuegoModal from "../../components/Juego/JuegoModal/JuegoModal";
 import JuegoResumen from "../../components/Juego/JuegoResumen/JuegoResumen";
+import JuegoProductos from "../../components/Juego/JuegoProductos/JuegoProductos";
+import NoPuntos from "../../components/Juego/NoPuntos/NoPuntos";
 
 const hardcodedUser = {
     email: "isabel@example.com",
@@ -50,7 +53,8 @@ const Juegos = () => {
     const [userData, setUserData] = useState({ email: "", password: "" });
     const [modalOpen, setModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState("");
-    // const [modalMessage, setModalMessage] = useState("");
+
+    const navigate = useNavigate();
 
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
@@ -182,7 +186,45 @@ const Juegos = () => {
                                 <div className="game__summary game__intro my-2 text-left">
                                     {/* <img src="../../assets/juego/confeti.png" alt="Confeti" className="summary__image" /> */}
                                     <JuegoResumen />
-                                    <button className="btn btn-lg btn-jugar" onClick={() => setGameStep(0)}>Continuar</button>
+                                    <button className="btn btn-lg btn-jugar" onClick={handleNextStep}>Continuar</button>
+                                </div>
+                            ) : gameStep === 5 ? (
+                                <div className="game__summary game__intro my-2">
+                                    <JuegoProductos />
+                                    <div className="game__options">
+                                        <button
+                                            className="game__option"
+                                            onClick={() => window.open("https://www.viabcp.com/solicitar-tarjeta", "_blank")}
+                                        >
+                                            Con tarjeta de crédito
+                                        </button>
+                                        <button
+                                            className="game__option"
+                                            onClick={() => window.open("https://www.viabcp.com/tarjetas/debito", "_blank")}
+                                        >
+                                            Con tarjeta de débito
+                                        </button>
+                                        <button
+                                            className="game__option"
+                                            onClick={() => window.open("https://www.yape.com.pe/crea-tu-cuenta", "_blank")}
+                                        >
+                                            Por Yape
+                                        </button>
+                                    </div>
+
+
+                                    <button className="btn btn-lg btn-jugar" onClick={handleNextStep}>Continuar</button>
+                                </div>
+                            ) : gameStep === 6 ? (
+                                <div className="game__summary game__intro">
+                                    <NoPuntos
+                                        ardillaImg="/src/assets/juego/ardilla_triste.png"
+                                        monedaImg="/src/assets/juego/coin.png"
+                                        onRegistroClick={() => console.log("Registro clickeado")}
+                                        
+                                    />
+                                     <button className="btn btn-lg btn-finalizar"  onClick={() => navigate("/")}>Finalizar</button>
+                                   
                                 </div>
                             ) : null}
                         </div>

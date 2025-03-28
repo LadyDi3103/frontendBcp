@@ -254,3 +254,14 @@
     color: #ffffff;
   }
   
+
+  .btn-finalizar {
+    background: #091b4a; 
+    color: #ffffff;
+  }
+
+  .btn-finalizar:hover {
+    background-color: var(--color-naranja); 
+    color: #ffffff;
+  }
+  
