@@ -20,11 +20,62 @@
   }
   
   .modal-close {
+    position: row-reverse;
     margin-top: 10px;
     padding: 10px;
     background: red;
     color: white;
     border: none;
     cursor: pointer;
+  }
+
+  .opcion-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px;
+    max-width: 320px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  }
+  
+  .contenido {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .opcion-img {
+    width: 80px;
+    height: auto;
+    flex-shrink: 0;
+  }
+  
+  .opcion-texto h4 {
+    color: #162c63;
+    font-size: 16px;
+    margin: 0 0 6px 0;
+  }
+  
+  .opcion-texto p {
+    font-size: 14px;
+    color: #444;
+    margin: 0;
+    text-align: left;
+  }
+  
+  .boton-entendido {
+    background-color: #f58220;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .boton-entendido:hover {
+    background-color: #e06e10;
   }
   

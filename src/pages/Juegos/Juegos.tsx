@@ -3,6 +3,7 @@ import { useState } from "react";
 import MainLayout from "../../Layout/MainLayout/MainLayout";
 import JuegoLogin from "../../components/Juego/JuegoLogin/JuegoLogin";
 import "./Juegos.css";
+import "../../components/Juego/JuegoModal/JuegoModal.css";
 import PuntosAcumulados from "../../components/Juego/Puntos/PuntosAcumulados";
 import Menu from "../../components/Juego/Menu/Menu";
 import JuegoFrame from "../../components/Juego/JuegoFrame/JuegoFrame";
@@ -108,19 +109,19 @@ const Juegos = () => {
                             </div>
 
                             {selectedGame === null ? (
-                            <>
-                                <p className="game__description mt-2">
-                                    Descubre cómo mejorar tus finanzas con historias reales
-                                </p>
-                                <section className="medios-grid mt-4">
-                                    {gameOptions.map((option) => (
-                                        <div key={option.title} onClick={() => handleGameSelection(option.title)}>
-                                            <JuegoCard titulo={option.title} descripcion={option.description} imagen={option.image} />
-                                        </div>
-                                    ))}
-                                </section>
-                            </>
-                        ): gameStep === 1 ? (
+                                <>
+                                    <p className="game__description mt-2">
+                                        Descubre cómo mejorar tus finanzas con historias reales
+                                    </p>
+                                    <section className="medios-grid mt-4">
+                                        {gameOptions.map((option) => (
+                                            <div key={option.title} onClick={() => handleGameSelection(option.title)}>
+                                                <JuegoCard titulo={option.title} descripcion={option.description} imagen={option.image} />
+                                            </div>
+                                        ))}
+                                    </section>
+                                </>
+                            ) : gameStep === 1 ? (
                                 <div className="game__intro my-5">
                                     <img src="/src/assets/juego/juanaCover.png" alt="Juana" className="character__image" />
                                     <h2>Bienvenida</h2>
@@ -140,20 +141,45 @@ const Juegos = () => {
                                 </div>
                             ) : gameStep === 3 ? (
                                 <div className="game__story my-5">
-                                    <div onClick={() => handleOptionClick("Tarjeta de crédito")}>
-                                        <JuegoCard titulo="Tarjeta de crédito" descripcion="Detalles sobre tarjeta de crédito" imagen="/src/assets/juego/card_1.png" />
+                                    <h2 className="game__title">Tienes que hacer una compra</h2>
+                                    <p className="game__subtitle">
+                                        Vas al mercado y gastas S/150 soles ¿Cómo quieres pagar?
+                                    </p>
+
+                                    <div className="game__options">
+                                        <button
+                                            className="game__option game__option--selected"
+                                            onClick={() => handleOptionClick("En efectivo")}
+                                        >
+                                            En efectivo
+                                        </button>
+                                        <button
+                                            className="game__option"
+                                            onClick={() => handleOptionClick("Tarjeta de crédito")}
+                                        >
+                                            Con tarjeta de crédito
+                                        </button>
+                                        <button
+                                            className="game__option"
+                                            onClick={() => handleOptionClick("Tarjeta de débito")}
+                                        >
+                                            Con tarjeta de débito
+                                        </button>
+                                        <button
+                                            className="game__option"
+                                            onClick={() => handleOptionClick("Yape")}
+                                        >
+                                            Por Yape
+                                        </button>
                                     </div>
-                                    <div onClick={() => handleOptionClick("Tarjeta de débito")}>
-                                        <JuegoCard titulo="Tarjeta de débito" descripcion="Detalles sobre tarjeta de débito" imagen="/src/assets/juego/card_2.png" />
-                                    </div>
-                                    <div onClick={() => handleOptionClick("Yape")}>
-                                        <JuegoCard titulo="Yape" descripcion="Detalles sobre Yape" imagen="/src/assets/juego/card_3.png" />
-                                    </div>
-                                    <button className="btn btn-lg btn-jugar" onClick={handleContinue}>Continuar</button>
+
+                                    <button className="btn btn-lg btn-jugar mt-4" onClick={handleContinue}>
+                                        Continuar
+                                    </button>
                                 </div>
                             ) : gameStep === 4 ? (
                                 <div className="game__summary">
-                                    <img src="/assets/juego/confeti.png" alt="Confeti" className="summary__image" />
+                                    <img src="../../assets/juego/confeti.png" alt="Confeti" className="summary__image" />
                                     <h2>¿Qué aprendimos?</h2>
                                     <p>Hemos aprendido diferentes opciones para hacer pagos:</p>
                                     <ul>
@@ -172,11 +198,16 @@ const Juegos = () => {
                     </section>
                 </JuegoFrame>
 
-                <JuegoModal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
-                <h2>{modalContent}</h2>
-                <button className="btn btn-lg btn-jugar" onClick={handleContinue}>Continuar</button>
-            </JuegoModal>
-            
+                <JuegoModal
+                    isOpen={modalOpen}
+                    onClose={() => setModalOpen(false)}
+                    titulo="En efectivo"
+                    descripcion="Riesgo de pérdida pero control de gasto."
+                    imagen="/src/assets/juego/mascota_sobre_logo.png"
+                    onClick={handleContinue}
+                />
+
+
             </MainLayout>
         );
     }
