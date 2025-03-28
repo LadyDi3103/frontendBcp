@@ -154,25 +154,25 @@ const Juegos = () => {
                                     <div className="game__options">
                                         <button
                                             className="game__option game__option--selected"
-                                            onClick={() => handleOptionClick("En efectivo")}
+                                            onClick={() => handleOptionClick()}
                                         >
                                             En efectivo
                                         </button>
                                         <button
                                             className="game__option"
-                                            onClick={() => handleOptionClick("Tarjeta de crédito")}
+                                            onClick={() => handleOptionClick()}
                                         >
                                             Con tarjeta de crédito
                                         </button>
                                         <button
                                             className="game__option"
-                                            onClick={() => handleOptionClick("Tarjeta de débito")}
+                                            onClick={() => handleOptionClick()}
                                         >
                                             Con tarjeta de débito
                                         </button>
                                         <button
                                             className="game__option"
-                                            onClick={() => handleOptionClick("Yape")}
+                                            onClick={() => handleOptionClick()}
                                         >
                                             Por Yape
                                         </button>
