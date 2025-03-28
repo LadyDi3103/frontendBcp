@@ -78,8 +78,7 @@ const Juegos = () => {
     //     setGameStep((prevStep) => prevStep + 1);
     // };
 
-    const handleOptionClick = (option: string) => {
-        setModalContent(option);
+    const handleOptionClick = () => {
         setModalOpen(true);
     };
 
@@ -93,9 +92,6 @@ const Juegos = () => {
     }
 
     {
-        function setMostrarChat(arg0: boolean): void {
-            throw new Error("Function not implemented.");
-        }
 
         return (
             <MainLayout>
