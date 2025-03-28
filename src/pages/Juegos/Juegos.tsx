@@ -9,6 +9,7 @@ import Menu from "../../components/Juego/Menu/Menu";
 import JuegoFrame from "../../components/Juego/JuegoFrame/JuegoFrame";
 import JuegoCard from "../../components/Juego/JuegoCard/JuegoCard";
 import JuegoModal from "../../components/Juego/JuegoModal/JuegoModal";
+import JuegoResumen from "../../components/Juego/JuegoResumen/JuegoResumen";
 
 const hardcodedUser = {
     email: "isabel@example.com",
@@ -178,16 +179,10 @@ const Juegos = () => {
                                     </button>
                                 </div>
                             ) : gameStep === 4 ? (
-                                <div className="game__summary">
-                                    <img src="../../assets/juego/confeti.png" alt="Confeti" className="summary__image" />
-                                    <h2>¿Qué aprendimos?</h2>
-                                    <p>Hemos aprendido diferentes opciones para hacer pagos:</p>
-                                    <ul>
-                                        <li>Tarjeta de débito</li>
-                                        <li>Tarjeta de crédito</li>
-                                        <li>Yape</li>
-                                    </ul>
-                                    <button className="btn btn-lg btn-jugar" onClick={() => setGameStep(0)}>Finalizar</button>
+                                <div className="game__summary game__intro my-2 text-left">
+                                    {/* <img src="../../assets/juego/confeti.png" alt="Confeti" className="summary__image" /> */}
+                                    <JuegoResumen />
+                                    <button className="btn btn-lg btn-jugar" onClick={() => setGameStep(0)}>Continuar</button>
                                 </div>
                             ) : null}
                         </div>

@@ -1,0 +1,45 @@
+.aprendizaje-wrapper {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 16px;
+    position: relative;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .confetti-background {
+    background: url('/assets/confetti-bg.png') no-repeat center;
+    background-color: #101759;
+    background-size: cover;
+    height: 120px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+  
+  .aprendizaje-card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    margin-top: -40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  
+  .aprendizaje-card h3 {
+    font-size: 18px;
+    color: #162c63;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  
+  .aprendizaje-card p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .aprendizaje-card ul {
+    margin-left: 20px;
+    padding-left: 0;
+    font-size: 14px;
+  }
