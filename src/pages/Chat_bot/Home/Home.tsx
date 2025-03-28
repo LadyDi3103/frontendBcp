@@ -1,6 +1,6 @@
 
-import Hero from "../../components/Hero/Hero";
-import MainLayout from "../../Layout/MainLayout/MainLayout";
+import Hero from "../../../components/Hero/Hero";
+import MainLayout from "../../../Layout/MainLayout/MainLayout";
 
 const Home = () => {
     

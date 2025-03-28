@@ -52,7 +52,7 @@ const Juegos = () => {
     const [gameStep, setGameStep] = useState<number>(0);
     const [userData, setUserData] = useState({ email: "", password: "" });
     const [modalOpen, setModalOpen] = useState(false);
-    const [modalContent, setModalContent] = useState("");
+
 
     const navigate = useNavigate();
 
@@ -74,9 +74,9 @@ const Juegos = () => {
         setGameStep((prevStep) => prevStep + 1);
     };
 
-    const handlPrevStep = () => {
-        setGameStep((prevStep) => prevStep + 1);
-    };
+    // const handlPrevStep = () => {
+    //     setGameStep((prevStep) => prevStep + 1);
+    // };
 
     const handleOptionClick = (option: string) => {
         setModalContent(option);
@@ -93,6 +93,10 @@ const Juegos = () => {
     }
 
     {
+        function setMostrarChat(arg0: boolean): void {
+            throw new Error("Function not implemented.");
+        }
+
         return (
             <MainLayout>
                 <JuegoFrame>
@@ -221,10 +225,10 @@ const Juegos = () => {
                                         ardillaImg="/src/assets/juego/ardilla_triste.png"
                                         monedaImg="/src/assets/juego/coin.png"
                                         onRegistroClick={() => console.log("Registro clickeado")}
-                                        
+
                                     />
-                                     <button className="btn btn-lg btn-finalizar"  onClick={() => navigate("/")}>Finalizar</button>
-                                   
+                                    <button className="btn btn-lg btn-finalizar" onClick={() => navigate("/")}>Finalizar</button>
+
                                 </div>
                             ) : null}
                         </div>
@@ -233,6 +237,7 @@ const Juegos = () => {
                     <section className="bg-danger mt-4 container__menu">
                         <Menu />
                     </section>
+
                 </JuegoFrame>
 
                 <JuegoModal
