@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: calc(100vh - 80px);
     background-color: var(--color-azul);
   }
   
@@ -119,6 +119,14 @@
     
   }
 
+  .game__intro, .game__story{
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    
+  }
+
   .medios-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -136,7 +144,18 @@
   .container__menu {
     position: relative;
   }
-  
+
+  .btn-jugar:hover {
+    background-color: darken(var(--color-naranja), 10%); 
+    transform: scale(1.05); 
+    color: aliceblue;
+    background-color: #182b8f;
+}
+
+.game__intro p{
+  font-size: var( --font-body-mobile);
+  font-weight: var(--font-weight-medium);
+}
   /* 📱 Responsivo */
   @media (min-width: 768px) {
     .juego__container {
