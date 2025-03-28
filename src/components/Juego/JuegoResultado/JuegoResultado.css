@@ -1,0 +1,13 @@
+.juego-resultado {
+    text-align: center;
+  }
+  
+  .juego-restart {
+    padding: 10px;
+    background: var(--secondary-color);
+    color: white;
+    border: 1px solid red;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  

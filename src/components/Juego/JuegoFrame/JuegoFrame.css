@@ -1,0 +1,23 @@
+.juego-card {
+    width: 428px;
+    height: 818px;
+    background-color: var(--primary-color);
+    border-radius: 32px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #FFFFFF;
+    font-size: var(--font-title-mobile);
+    cursor: pointer;
+    transition: transform 0.2s;
+    border:1px solid red;
+    padding: 1.5rem;
+  }
+
+  .juego-container__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-azul);
+  }
