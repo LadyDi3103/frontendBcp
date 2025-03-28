@@ -35,6 +35,7 @@
 
    /* Tipografía para Mobile */
    --font-title-mobile: 24px; /* Títulos en móvil */
+   --font-body-medium-mobile: 12x;
    --font-body-mobile: 16px; /* Cuerpo en móvil */
 
      /* Pesos de fuente */
@@ -84,7 +85,7 @@ p.small {
     font-size: var(--font-title-mobile);
   }
 
-  p {
+  /* p {
     font-size: var(--font-body-mobile);
-  }
+  } */
 }

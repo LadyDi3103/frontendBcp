@@ -1,0 +1,120 @@
+/* Estilos generales */
+.juego {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-azul);
+  }
+  
+  .juego__container {
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Imagen del avatar */
+  .juego__avatar {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .juego__avatar img {
+    width: 150px;
+    height: auto;
+  }
+  
+  /* Título */
+  .juego__titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-azul);
+  }
+  
+  .juego__highlight {
+    color: var(--color-rojo);
+  }
+  
+  .juego__subtitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--color-texto);
+  }
+  
+  /* Formulario */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .juego__forgot {
+    text-align: right;
+    font-size: 0.9rem;
+    color: var(--color-azul);
+    text-decoration: underline;
+  }
+  
+  /* Botones */
+  .juego__btn {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .ingresar {
+    background-color: var(--color-naranja);
+    color: white;
+  }
+  
+  .ingresar:hover {
+    background-color: var(--color-azul);
+  }
+  
+  .probar {
+    background-color: white;
+    border: 2px solid var(--color-azul);
+    color: var(--color-azul);
+  }
+  
+  .probar:hover {
+    background-color: var(--color-azul);
+    color: white;
+  }
+  
+  /* Registro */
+  .juego__register {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+  
+  .juego__register a {
+    color: var(--color-rojo);
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  /* 📱 Responsivo */
+  @media (min-width: 768px) {
+  
+    .juego__titulo {
+      font-size: 2rem;
+    }
+  }
+  

@@ -1,0 +1,32 @@
+.medios__card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+  }
+
+.medios__card:hover {
+    transform: scale(1.05);
+}
+  
+  .medios__titulo {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #222;
+  }
+  
+  .card__imagen {
+    width: 65px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 5px;
+  }
+  
+  .medios__descripcion {
+    font-size: 12px;
+    color: #555;
+    margin: 0;
+  }

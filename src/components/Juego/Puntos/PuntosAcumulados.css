@@ -1,0 +1,44 @@
+.puntos-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    padding: 12px 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    width: 100%;
+  }
+  
+  .puntos-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .puntos-titulo {
+    font-size: 18px;
+    font-weight: 500;
+    color: #555;
+    margin: 0;
+  }
+  
+  .puntos-contenido {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .puntos-icono {
+    color: #f58220;
+  }
+  
+  .puntos-texto {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .puntos-icono-derecha {
+    font-size: 32px;
+    color: #d38c00;
+  }
