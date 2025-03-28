@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import Home from "./pages/Home/Home";
+import Home from "./pages/Chat_bot/Home/Home";
 import Juegos from "./pages/Juegos/Juegos";
 import './App.css'
 
